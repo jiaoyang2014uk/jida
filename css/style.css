@@ -1,0 +1,109 @@
+/**
+ * @description style.css
+ * @author Yang.J
+ * @date 2018-12-27
+ */
+
+/*== common ==*/
+.container {width: 1200px; margin-left: auto; margin-right: auto;}
+.w-135 {width: 135px;}
+.w-1065 {width: 1065px;}
+.w-483 {width: 483px;}
+.w-692 {width: 692px;}
+.dis-flex {display: flex;}
+.fw-wrap {flex-wrap: wrap;}
+.jc-end {justify-content: flex-end;}
+.mt-n10 {margin-top: -10px;}
+
+/*== compeonts ==*/
+.logo {display: block; width: 135px; height: 130px;}
+.logo img {display: block; width: 100%; height: 100%;}
+
+.search {width: 301px; height: 47px; line-height: 47px; background: url(../img/bg_search.jpg); font-size: 0; letter-spacing: 0; overflow: hidden;  position: relative;}
+.search input {box-sizing: border-box; display: inline-block; width: 243px; height: 27px; background-color: transparent; margin-left: 11px; vertical-align: middle; padding-left: 24px; padding-top: 3px; color: #333; }
+.search button {display: inline-block; width: 31px; height: 31px; background: url(../img/btn_search.png); vertical-align: middle; margin-left: 7px;}
+.search i {display: block; width: 12px; height: 16px; background: url(../img/icon_search.png); position: absolute; top: 16px; left: 19px;}
+
+nav {display: flex; justify-content: flex-end;}
+nav .category a {display: block; width: 56px; height: 29px; color: #2e2e2e; margin-left: 63px; font-size: 14px; line-height: 14px; transition: 0.5s; position: relative; transition: 0.5s;}
+nav .category a::after {content:""; display: block; height: 1px; width: 57px; background: transparent; position: absolute; bottom: 0; transition: 0.5s;}
+nav .category a:hover {color: #da251c;}
+nav .category a:hover::after {background: #da251c;}
+
+.title {text-align: center; position: relative; height: 52px;}
+.title h2 {font-size: 30px; line-height: 36px; color: #dc042b; font-weight: normal; vertical-align: bottom;}
+.title h2 i {font-size: 24px; color: #262626; font-style: normal; line-height: 30px;}
+.title::after {content: ""; display: block; width: 1056px; height: 1px; background-image: url(../img/bg_title.png); position: absolute; bottom: 0; left: 0; right: 0; margin: auto;}
+
+
+
+/*=== layout ==*/
+/*header*/
+header {height: 140px;}
+header .logo {margin-top: 7px;}
+header .search {margin-top: 34px;}
+header nav { margin-top: 30px;}
+
+/*banner*/
+section.banner {position: relative;}
+section.banner .wr-title {position: absolute; left: 0; right: 0; top: 80px; text-align: center; z-index: 100;}
+section.banner .wr-title h2 {font-size: 48px; line-height: 62px; color: #0050b1; letter-spacing: 1px; font-weight: 500; text-shadow: 1px 1px 0px #fff;}
+section.banner .wr-title h2 em {font-size: 15px; font-weight: normal; font-style: normal; text-transform: uppercase; letter-spacing: normal;}
+section.banner .wr-banner {position: relative;}
+section.banner .wr-banner .item-banner {height: 537px; background-position: center center;}
+section.banner .wr-banner .slick-dots {position: absolute; left: 0; right: 0; bottom: 24px; text-align: center;}
+section.banner .wr-banner .slick-dots li {display: inline-block; margin-left: 4px; margin-right: 4px;}
+section.banner .wr-banner .slick-dots li button {display: block; width: 10px; height: 10px; border-radius: 50%; background: #9b9b9b; font-size: 0; cursor: pointer; transition: 0.5s}
+section.banner .wr-banner .slick-dots li.slick-active button {background: #da251c;}
+
+/*about*/
+section.about .title {margin-top: 49px;}
+section.about .content {margin-top: 48px; font-size: 14px; color: #262626; line-height: 30px; text-align: justify; display: flex; flex-direction: row; justify-content: space-between; }
+section.about .content .wr-l {width: 483px; height: 344px; overflow: hidden;}
+section.about .content .wr-r {width: 692px; height: 350px; margin-top: -10px;}
+section.about .content .wr-r .txt {height: 330px; overflow: hidden;}
+section.about .content img {width: 100%; height: auto;}
+section.about .content p {text-indent: 28px;}
+section.about .content a {font-size: 14px; color: #da251c; line-height: 30px; float: right;}
+
+/* case */
+section.case .title {margin-top: 80px;}
+section.case .item-list {margin-top: 48px; display: flex; flex-flow: row wrap;}
+section.case .item-case {width: 400px; height: 300px;}
+section.case .item-case > a {display:block; width:100%; height: 100%; position: relative; overflow: hidden;}
+section.case .item-case > a::after {content:""; display: block; width: 100%; height: 100%; background: #000; opacity: 0; position: absolute; left:0; top: 0; visibility: hidden; transition: 0.5s;}
+section.case .item-case > a > h3 {font-size: 24px; line-height: 36px; color: #dc042b; width: 80%; height: 36px; position: absolute; right: 0; left: 0; margin: auto; text-align: center; bottom: 123px; overflow: hidden; font-weight: normal; opacity: 0; visibility: hidden; z-index: 20; transform: translateY(-50px); transition: 0.5s;}
+section.case .item-case > a > i {display: block; width: 48px; height: 48px; position: absolute; right: 0; left: 0; margin: auto; top: 197px; box-sizing: border-box; border: 1px solid #fff; border-radius: 50%; z-index: 20; opacity: 0; visibility: hidden; transform: translateY(50px); transition: 0.5s;}
+section.case .item-case > a > img {display: block; width: 100%; height: auto;}
+section.case .item-case > a > i::before {content:""; display: block; width: 2px; height: 26px; left: 50%; top: 50%; background: #fff; margin-left: -1px; margin-top: -13px; position: absolute;}
+section.case .item-case > a > i::after {content:""; display: block; width: 26px; height: 2px; left: 50%; top: 50%; background: #fff; margin-left: -13px; margin-top: -1px; position: absolute;}
+section.case .item-case > a:hover::after {opacity: 0.5; visibility: visible;}
+section.case .item-case > a:hover > i {opacity: 1; visibility: visible; transform: translateY(0);}
+section.case .item-case > a:hover > h3 {opacity: 1; visibility: visible; transform: translateY(0);}
+
+/* news */
+section.news {background: #eaeaea; margin-top: 68px;}
+section.news .container {padding: 40px 0 60px 0;}
+section.news .news-list {margin-top: 14px; display: flex; flex-flow: row wrap; justify-content: space-between;}
+section.news .news-item {width: 571px; height: auto; display: flex; flex-direction: row; justify-content: space-between; margin-top: 40px;}
+section.news .news-list .wr-l {width: 131px; height: 98px; overflow: hidden;}
+section.news .news-list .wr-l img {display:block; width: 100%; height: auto;}
+section.news .news-list .wr-r {width: 429px; height: 98px; overflow: hidden;}
+section.news .news-list .wr-r .txt-title {display: flex; flex-direction: row; justify-content: space-between;}
+section.news .news-list .wr-r .txt-title > h3, section.news .news-list .wr-r .txt-title .time  {font-size: 14px; line-height: 22px; height: 22px; color:#2b2b2b; overflow: hidden; font-weight: normal;}
+section.news .news-list .wr-r .txt-title > h3 {width: 275px;}
+section.news .news-list .wr-r .txt-title .time {display: block; width: 80px; text-align: right;}
+section.news .news-list .wr-r .txt-title > h3::before {content: ""; display: inline-block; width: 5px; height: 5px; background: #da251c; vertical-align: middle; margin-right: 7px;}
+section.news .news-list .wr-r > p {font-size: 12px; line-height: 20px; color: #494949; overflow: hidden; text-align: justify;}
+
+/* footer */
+.footer {background: #282828;}
+.footer .container {padding: 28px 0 12px 0;}
+.footer .container .wr-t {display: flex; flex-flow: row wrap; justify-content: space-between;}
+.footer .container .wr-t .footer-item h3 {font-size: 14px; line-height: 30px; height: 30px; color: #ffffff; overflow: hidden; position: relative; font-weight: normal; display: block; width: 200px;}
+.footer .container .wr-t .footer-item h3::before {content: ""; display: inline-block; width: 5px; height: 5px; background: #da251c; vertical-align: middle; margin-right: 10px;}
+.footer .container .wr-t .footer-item h3::after {content: ""; display: block; width: 142px; height: 1px; background: #c5c5c5; position: absolute; bottom: 0px;}
+.footer .container .wr-t .footer-item h3.long::after {width: 200px;}
+.footer .container .wr-t .footer-item .footer-list .content > a{font-size: 12px; line-height: 24px; height: 24px; color: #c5c5c5;}
+.wr-b {background: #282828; border-top: 1px solid #c5c5c5; padding-bottom: 12px;}
+.wr-b > p {font-size: 12px; line-height: 24px; color: #c5c5c5; text-align: center;  padding-top: 16px; }
